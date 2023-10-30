@@ -1,7 +1,7 @@
 import {useState} from "react";
 
 function ToDo(props) {
-    const [complete, setCompleted] = useState(props.completed);
+    const [completed, setCompleted] = useState(props.completed);
 
     return (
         <div key={props.index}>
@@ -9,7 +9,7 @@ function ToDo(props) {
             <p>ID: {props.id}</p>
             <p>Title: {props.title}</p>
             <label>Completed: </label>
-            <input type="checkbox" checked={complete} onChange={(event) => {setCompleted(event.target.complete)}}/>
+            <input type="checkbox" checked={completed} onChange={(event) => {setCompleted(event.target.checked)}}/>
         </div>
     );
 }
