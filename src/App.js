@@ -1,15 +1,15 @@
 import ToDo from "./ToDo.js";
+import Comment from "./Comment.js";
+import Spinner from "./Spinner.js";
 import { useEffect, useState } from "react";
 
 function App() {
   const [toDo, setToDo] = useState({});
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
 
     async function getToDo() {
-      setLoading(true);
-
       const response = await fetch("https://jsonplaceholder.typicode.com/todos/4");
       const data = await response.json();
       
@@ -22,7 +22,8 @@ function App() {
 
   return (
     <>
-      {loading === false ? <ToDo {...toDo}/> : <p>No info to load..</p>}
+      {loading === false ? <ToDo {...toDo}/> : <Spinner componentToLoad={"ToDo"}/>}
+      <Comment />
     </>
   );
 }
