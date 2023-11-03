@@ -1,6 +1,7 @@
 import ToDo from "./ToDo.js";
 import Comment from "./Comment.js";
 import Spinner from "./Spinner.js";
+import PostList from "./PostList.js";
 import { useEffect, useState } from "react";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
     <>
       {loading === false ? <ToDo {...toDo}/> : <Spinner componentToLoad={"ToDo"}/>}
       <Comment />
+      <PostList />
     </>
   );
 }
