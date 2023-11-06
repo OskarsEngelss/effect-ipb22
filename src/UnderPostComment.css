@@ -1,0 +1,12 @@
+.commentsDiv {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    background-color: rgb(255, 119, 119);
+    border: solid 1px black;
+
+    padding-left: 50px;
+    margin-bottom: 50px;
+}

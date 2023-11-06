@@ -1,4 +1,4 @@
-.singlePost {
+.actualPost {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,6 +6,5 @@
 
     background-color: lightblue;
     border: solid 1px black;
-
-    margin-bottom: 50px;
+    border-bottom: 0px;
 }
